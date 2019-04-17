@@ -1,0 +1,110 @@
+<div class="ui grid container">
+    <div class="eight wide computer sixteen wide mobile eight wide tablet">
+        <div class="music-player-container">
+            <div class="album-image">
+                <div class="images">
+
+                </div>
+            </div>
+            <div class="plyr-controllers">
+                <input type="range" class="seek-bar">
+                <p class="song-title">Chris Brown - Love </p>
+                <div class="controllers-container">
+                   <div class="span-control"> <span><i class="ui backward icon"></i></span></div>
+                    <div class="span-control"> <span><i class="ui play icon"></i></span></div>
+                    <div class="span-control"><span><i class="ui forward icon"></i></span></div>
+                </div>
+                <input type="range" class="seek-volume seek-bar">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{!-- <div class="container">
+    <video controls crossorigin playsinline poster="" id="player">
+                    <!-- Video files -->
+                    <source src="/javascripts/Amelia Monet ft. EO - Baddest [Music Video] _ GRM Daily.mp4" type="video/mp4" size="576">
+                    <source src="/javascripts/Amelia Monet ft. EO - Baddest [Music Video] _ GRM Daily.mp4" type="video/mp4" size="720">
+                    <source src="/javascripts/Amelia Monet ft. EO - Baddest [Music Video] _ GRM Daily.mp4" type="video/mp4" size="1080">
+                    <source src="/javascripts/Amelia Monet ft. EO - Baddest [Music Video] _ GRM Daily.mp4" type="video/mp4" size="1440">
+    
+                    <!-- Caption files -->
+                    <track kind="captions" label="English" srclang="en" src=""
+                        default>
+                    <track kind="captions" label="Français" srclang="fr" src="">
+    
+                    <!-- Fallback for browsers that don't support the <video> element -->
+                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+                </video>
+
+    <div class="actions">
+        <button type="button" class="btn js-play">Play</button>
+        <button type="button" class="btn js-pause">Pause</button>
+        <button type="button" class="btn js-stop">Stop</button>
+        <button type="button" class="btn js-rewind">Rewind</button>
+        <button type="button" class="btn js-forward">Forward</button>
+    </div>
+</div>
+<script src="https://cdn.plyr.io/3.5.2/plyr.js"></script>
+<script>
+    $(document).ready(function() {
+       
+         const player = new Plyr('#player', {
+            controls: [
+                'restart',
+                'play',
+                'progress',
+                'current-time',
+                'duration',
+                'mute',
+                'volume'
+            ]
+        });
+        var video = $('video'),
+            isPlaying = false
+            ;
+
+        // Expose
+        window.player = player;
+
+        // Bind event listener
+        function on(selector, type, callback) {
+            // document.querySelector(selector).addEventListener(type, callback, false);
+        }
+       
+            // Play
+        on('.js-play', 'click', () => {
+            player.play();
+        });
+
+        // // Pause
+        // on('.js-pause', 'click', () => {
+        //     player.pause();
+        // });
+
+        // Stop
+        on('.js-stop', 'click', () => {
+            player.stop();
+        });
+
+        // Rewind
+        on('.js-rewind', 'click', () => {
+            player.rewind();
+        });
+
+        // Forward
+        on('.js-forward', 'click', () => {
+            player.forward();
+        });
+
+  
+    })
+</script> --}}
+
+<script>
+    $(document).ready(function(){
+       
+    })
+</script>

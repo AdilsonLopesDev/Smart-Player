@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="/images/thinkFirstCodeAfter.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheets/Semantic-UI/semantic.css">
+        {{!-- <link rel="stylesheet" href="/semantic/semantic.css"> --}}
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    {{!-- <link rel="stylesheet" href="/stylesheets/libs.css"> --}}
+    <link rel="stylesheet" href="/plyr/plyr.css">
+    <link rel="stylesheet" href="/stylesheets/audio.css">
+    <script src="/javascripts/jquery.js"></script>
+    {{!--load config file--}}
+    <script src="/javascripts/config/config.js"></script>
+     {{!--load loadfile file to handle with SO --}}
+    <script src="/backgroud.js"></script>
+    <script src="/javascripts/loadfile.js"></script>
+    <script rel="stylesheet" href="/semantic/semantic.js"></script>   
+</head>
+
+<body>
+    <div class="ui grid" >
+        <div class="sixteen wide computer  sixteen wide mobile eight wide tablet column">
+            <div class="ui sidebar inverted left vertical  menu">
+                <i class="ui arrow left back-forward icon" src=""></i>
+                <i class="ui arrow right back-forward icon"></i>
+                <a href="/" class="sidebar-nav-link"><i class="ui computer icon"></i> This PC</a>
+                <a class="sidebar-nav-link"><i class="ui file alternate icon"></i> Documents</a>
+                <a class="sidebar-nav-link" src="C:/Users/Antonio Lopes/Downloads/"><i class="ui download icon"></i>Downloads</a>
+                <a class="sidebar-nav-link" src="C:/Users/Antonio Lopes/Pictures/"><i class="ui photo icon"></i>Pictures</a>
+                <a class="sidebar-nav-link" src="C:/Users/Antonio Lopes/Videos/"><i class="ui music icon"></i>Musics</a>
+                <a class="sidebar-nav-link" src="C:/Users/Antonio Lopes/Music/"><i class="ui video icon"></i>Video</a>
+                <a class="sidebar-nav-link"><i class="ui user icon"></i>My Stuffs</a>
+                <a class="sidebar-nav-link" src="C:/"><i class="ui computer icon"></i>Local Disk (C:)</a>
+                <a class="sidebar-nav-link" src="E:/"><i class="ui computer icon"></i>Local Disk (E:)</a>
+            </div>
+            <div class="pusher">
+                {{{body}}}
+            </div>
+        </div>
+    </div>
+    
+    <button class="ui circular facebook icon button fixed">
+        <i class="sync icon"></i>
+    </button>
+    <script rel="stylesheet" href="/stylesheets/Semantic-UI/semantic.js"></script>
+    <script src="/stylesheets/Semantic-UI/components/sidebar.js"></script>
+      <script src="/plyr/plyr.js"></script>
+    <script src="/javascripts/html5media.js"></script>
+   <script>
+       
+        $(document).ready(function(){
+            $('.button.fixed').click(function(){
+                $('.ui.sidebar') 
+                .sidebar('setting', 'transition', 'scale down').sidebar('toggle');
+                //$('body').removeClass('pushable')
+            })
+            // $('.ui.basic.modal').modal('show');
+        })                    
+   </script>
+</body>
+
+</html>

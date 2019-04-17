@@ -1,0 +1,320 @@
+@charset "UTF-8";
+/*
+*Global Configuration
+*/
+html {
+  font-family: "century ghotic" !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+}
+
+.push {
+  background-color: transparent !important;
+}
+
+body.pushable {
+  background-color: transparent !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: #23232c !important;
+  padding: 104px 14px 14px 14px;
+}
+
+.back-forward {
+  position: fixed;
+  top: 15px;
+  height: 32px !important;
+  width: 32px !important;
+  border-radius: 50px;
+  color: #c2c2ca !important;
+}
+
+.back-forward:nth-child(1) {
+  opacity: 0;
+}
+
+.back-forward:nth-child(2) {
+  right: 15px;
+  opacity: 0;
+}
+
+.sidebar-nav-link {
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #c2c2ca !important;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  font-size: 14px;
+  height: 36px;
+  padding: 0 12px;
+  position: relative;
+  -webkit-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+}
+
+.sidebar-nav-link i {
+  font-size: 17px !important;
+  margin-top: -10px !important;
+  margin-right: 10px !important;
+}
+
+.sidebar-nav-link:hover,
+.back-forward:hover {
+  background-color: #42424d;
+  color: #fff;
+}
+
+#audio0 {
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 54.2%;
+}
+
+.card,
+.extra {
+  width: 100px !important;
+  background-color: #E2E5BA !important;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.image {
+  height: 85px !important;
+  width: 100%;
+}
+
+.image img {
+  height: 100% !important;
+}
+
+#plwrap {
+  overflow-y: scroll;
+  max-height: 360px;
+}
+
+.send_btn {
+  position: absolute;
+  width: 100%;
+  height: 38px;
+  left: 0px;
+  top: 26px;
+  border-radius: 4px;
+  background-color: #17bebb;
+  font-size: 16px;
+  color: #FFF;
+  text-align: center;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 36px;
+  background-image: url(/assets/questions/post_icon-79ff08e….svg);
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: 10px;
+  padding-left: 16px;
+}
+
+/*
+* Mobile Device
+*/
+button.fixed {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  opacity: 0.7;
+  cursor: pointer !important;
+}
+
+button.fixed:hover {
+  opacity: 1;
+}
+
+.music-player-container {
+  position: relative;
+  top: 44%;
+  transform: translateY(-34%);
+  width: 306px;
+  height: 500px;
+  border: 1px solid #333333;
+  -webkit-transform: translateY(-34%);
+  -moz-transform: translateY(-34%);
+  -ms-transform: translateY(-34%);
+  -o-transform: translateY(-34%);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.album-image {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.album-image .images {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  margin: 13px auto;
+  border-radius: 2.2px;
+  -webkit-border-radius: 2.2px;
+  -moz-border-radius: 2.2px;
+  -ms-border-radius: 2.2px;
+  -o-border-radius: 2.2px;
+}
+
+.plyr-controllers {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 15px;
+}
+
+.seek-bar {
+  margin-top: 20px;
+  background-color: red !important;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.seek-bar.seek-volume {
+  width: 50%;
+  margin-top: 40px;
+  float: right;
+}
+
+.song-title {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 12.4pt;
+  font-family: arial;
+  font-weight: 400;
+}
+
+.controllers-container {
+  margin-top: 24px;
+  display: flex;
+}
+
+.controllers-container .span-control {
+  flex: 1;
+  text-align: center;
+  display: flex;
+}
+
+.controllers-container .span-control span:hover {
+  color: #fff;
+  border: 1px solid #ccc;
+}
+
+.controllers-container .span-control span {
+  cursor: pointer;
+  color: #ccc;
+  padding: 4px 4px;
+  border-radius: 50%;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+}
+
+.controllers-container .span-control span i {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.controllers-container .span-control:nth-child(even) {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+/*
+  *Tablet Device
+  */
+@media only screen and (max-width: 767px) and (min-width: 380px) {
+  .music-player-container {
+    width: 506px;
+    position: relative;
+    left: 10%;
+    top: 50%;
+  }
+  .album-image .images {
+    width: 83%;
+  }
+  .seek-bar {
+    width: 88%;
+    margin-left: 5.5%;
+  }
+  .controllers-container {
+    width: 88%;
+    margin-left: 5.5%;
+  }
+  .seek-bar.seek-volume {
+    margin-right: 7%;
+  }
+}
+
+/*
+*Computer Device
+*/
+@media only screen and (min-width: 992px) {
+  .music-player-container {
+    width: 506px;
+    position: relative;
+    left: 10%;
+    top: 50%;
+  }
+  .album-image .images {
+    width: 83%;
+  }
+  .seek-bar {
+    width: 88%;
+    margin-left: 5.5%;
+  }
+  .controllers-container span {
+    width: 88%;
+  }
+  .controllers-container {
+    width: 88%;
+    margin-left: 5.5%;
+  }
+  .seek-bar.seek-volume {
+    margin-right: 7%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ui.grid.container.just-do {
+    width: calc( 1327px + 2rem) !important;
+  }
+}
+
+.push {
+  background-color: transparent !important;
+}

@@ -1,0 +1,50 @@
+<div class="ui grid fluid container just-do">
+  <div class="nine wide computer  sixteen wide mobile eight wide tablet column">
+        <div class="popper-content popper-search">
+            <div class="audio-container" style="display:none">
+                <div class="loop">
+                    <img src="" id="spectrum">
+                </div>
+                <div id="audio0">
+                    <audio id="audio1" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+                </div>
+            </div>
+            <video controls crossorigin playsinline poster="" id="player" style="display:none">
+                <!-- Video files -->
+                <source src="" type="video/mp4" size="576">
+                <source src="" type="video/mp4" size="720">
+                <source src="" type="video/mp4" size="1080">
+                <source src="" type="video/mp4" size="1440">
+
+                <!-- Caption files -->
+                <track kind="captions" label="English" srclang="en" src="" default>
+                <track kind="captions" label="Français" srclang="fr" src="">
+
+                <!-- Fallback for browsers that don't support the <video> element -->
+                <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+            </video>
+        </div>
+  </div>
+  
+  <div class="seven wide computer sixteen wide tablet sixteen wide mobile column scrolling">
+       <div class="ui doubling eight cards more-padding" id="folderList"></div>
+  </div>
+</div>
+{{!-- 
+<div class="ui active basic modal ">
+  <div class="header">Header</div>
+  <div class="content">
+    <p></p>
+    <p></p>
+    <p></p>
+  </div>
+</div> --}}
+{{!-- 
+<div class="container">
+ <div id="audio0">
+    <audio id="audio1" src="http://localhost:8000/musics/QzovVXNlcnMvQW50b25pbyBMb3Blcy9NdXNpYy9UeWdhIC0gS3lvdG8gKDIwMTgpLzAzLiBDb21lIGFuZCBCYWxsIFdpdCBNZS5tcDM=" preload controls>Your browser does not support HTML5 Audio! 😢</audio>
+</div>
+
+   <div class="ui doubling eight cards" id="folderList"></div> 
+
+</div> --}}
