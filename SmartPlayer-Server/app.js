@@ -5,12 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var hbs = require('express-handlebars');
 var so_access = require('./api/files')
+var players = require('./api/player');
 var indexRouter = require('./routes/index');
 var folderList = require('./routes/folderList');
 var folders = require('./computer/folders');
-var musics = require('./routes/musics');
-var videos = require('./routes/videos');
-var plays = require('./routes/player');
 const Cors = require('cors');
 var app = express();
 
@@ -23,18 +21,7 @@ app.use(Cors())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-// app.use((req, res, next) => {
-//     res.header("Access-Control-Allow-Origin", "*");
-//     res.header(
-//         "Access-Control-Allow-Origin-Headers",
-//         "Origin,X-Requested-With,Content-Type, Accept,Authorization"
-//     );
-//     if (req.method === 'OPTIONS') {
-//         res.header('Access-Control-Allow-Methods', 'PUT, POST,PACHT,DELETE,GET');
-//         return res.status(200).json({})
-//     }
-//     next();
-// })
+
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'helpers')));
@@ -43,9 +30,8 @@ app.use('/semantic', express.static(path.join(__dirname, 'node_modules', 'semant
 app.use('/', indexRouter);
 app.use('/so_build', so_access)
 app.use('/folderList', folderList);
-app.use('/musics', musics)
-app.use('/videos', videos)
 app.use('/folders', folders);
+app.use('/play', players);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

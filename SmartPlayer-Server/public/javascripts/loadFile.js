@@ -25,7 +25,7 @@ var SO_LoadFile = (function() {
 
                 }, 9000)
                 // $('body').css('background', `url(${background[2]}) no-repeat center center fixed`)
-            this._load_all_file('/folders', '')
+            this._load_all_file('/so_build', '')
         }
         /**
          * Summary => read all the file in SO
@@ -47,12 +47,12 @@ var SO_LoadFile = (function() {
                 }
 
                 FOLDER_LIST.empty();
-                e.folder.map(item => {
+                e.directories.map(item => {
                     FOLDER_LIST.append(THAT._files_list_template(item));
-                    if (master_config.is_extensions_of(item.full_path, 'audioOrvideo')) {
+                    if (master_config.is_extensions_of(item.fullPath, 'audioOrvideo')) {
                         THAT._array_list_files.push(item.full_path)
-                    } else if (master_config.is_extensions_of(item.full_path, 'audio')) {
-                        THAT._play_list.push(item.full_path)
+                    } else if (master_config.is_extensions_of(item.fullPath, 'audio')) {
+                        THAT._play_list.push(item.fullPath)
                     }
                 })
                 THAT._on_file_click()
@@ -71,7 +71,7 @@ var SO_LoadFile = (function() {
             var index = 0;
             if (this.is_dir(_dir) == true) {
                 let path = btoa(`${_dir}/`)
-                this._load_all_file('/folders/' + path, '');
+                this._load_all_file('/so_build/' + path, '');
                 return true;
             } else {
                 let _path = btoa(_dir);
@@ -115,12 +115,12 @@ var SO_LoadFile = (function() {
     }
 
     SO_LoadFile.prototype._files_list_template = (item) => {
-        const result = ` <a href="#${item.full_path}" class="red card" title="${item.title}" src="${item.full_path}" play-target="${item.play_target}">
+        const result = ` <a href="#${item.fullPath}" class="red card" title="${item.dirname}" src="${item.fullPath}" play-target="${item.contentType}">
                             <div class="image">
                             <img src="${item.icon}"/>
                             </div>
                             <div class="extra no-padding">
-                            ${item.title.substr(0,8)}
+                            ${item.dirname.substr(0,8)}
                                 <div class="ui star rating"></div>
                             </div>
                         </a>`;

@@ -1,7 +1,7 @@
 var Master_config = (function() {
     function Master_config(musicUrl, videoUrl, Extensions) {
-        this.musicUrl = `http://${window.location.hostname}:8000/musics/`;
-        this.videoUrl = `http://${window.location.hostname}:8000/videos/`;
+        this.musicUrl = `http://${window.location.hostname}:8000/play/`;
+        this.videoUrl = `http://${window.location.hostname}:8000/play/`;
         this.Extensions = [];
     }
 

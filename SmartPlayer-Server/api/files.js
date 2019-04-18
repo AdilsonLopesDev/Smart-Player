@@ -8,8 +8,7 @@ const express = require('express'),
 router.get('/', (req, res, next) => {
     const listOfDirectories = so_access.readDirectories('E:/'),
         data = { directories: listOfDirectories, extensions: so_access.init().extensions };
-    console.log(listOfDirectories)
-    res.json(data)
+    res.json(data);
 });
 
 
